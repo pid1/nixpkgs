@@ -1,6 +1,7 @@
 {
   lib,
   buildPythonPackage,
+  cryptography,
   email-validator,
   fetchPypi,
   flask,
@@ -25,6 +26,7 @@ buildPythonPackage rec {
   build-system = [ poetry-core ];
 
   dependencies = [
+    cryptography
     email-validator
     pyjwt
     requests

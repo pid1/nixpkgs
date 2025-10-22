@@ -41,6 +41,9 @@ buildPythonPackage rec {
   # Package does not include tests in distribution
   doCheck = false;
 
+  # Skip runtime dependency check - liccheck is a dev dependency
+  dontCheckRuntimeDeps = true;
+
   meta = with lib; {
     description = "Descope Python SDK";
     homepage = "https://descope.com/";
